@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello
+spec:
+  containers:
+  - image: sjking/hello-akka-http:1.0
+    name: hello
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+    - name: hello-conf-volume
+      mountPath: /usr/local/etc
+    ports:
+    - containerPort: 8001
+      name: http
+  volumes:
+  - name: hello-conf-volume
+    configMap:
+      name: hello-conf
