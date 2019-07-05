@@ -46,7 +46,7 @@ dockerBaseImage := "openjdk"
 
 dockerRepository := Some("index.docker.io")
 
-dockerUsername := Some("aterefe/ordering-system")
+dockerUsername := Some("aterefe")
 
 defaultLinuxInstallLocation in Docker := "/usr/local"
 
