@@ -44,7 +44,9 @@ dockerLabels := Map("maintainer" -> "noreply@example.com")
 
 dockerBaseImage := "openjdk"
 
-dockerRepository := Some("aterefe/ordering-system")
+dockerRepository := Some("index.docker.io")
+
+dockerUsername := Some("aterefe/ordering-system")
 
 defaultLinuxInstallLocation in Docker := "/usr/local"
 
