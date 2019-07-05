@@ -1,9 +1,7 @@
 pipeline {
 
   environment {
-    registry = 'aterefe/ordering-system'
     registryCredential = 'dockerhub'
-    dockerImage = ''
   }
 
   agent any
@@ -32,8 +30,9 @@ pipeline {
     stage('Docker build') {
       steps {
         script {
-          sh 'sbt docker:publishLocal'
-          // sh """docker build -t foo-bar-$BUILD_NUMBER target/docker/stage/"""
+          docker.withRegistry('', registryCredential) {
+            sh 'sbt docker:publish'
+          }
         }
       }
     }
