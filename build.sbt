@@ -24,11 +24,10 @@ libraryDependencies ++= {
 // ------------------------------------------------ //
 // ------------- Kubernetes configmaps ------------ //
 // ------------------------------------------------ //
-
-javaOptions in Universal ++= Seq(
-  "-Dconfig.file=/usr/local/etc/container.conf",
-  "-Dlog4j.configuration=file:/usr/local/etc/log4j.properties"
-)
+// javaOptions in Universal ++= Seq(
+//   "-Dconfig.file=/usr/local/etc/container.conf",
+//   "-Dlog4j.configuration=file:/usr/local/etc/log4j.properties"
+// )
 
 
 // ------------------------------------------------ //
